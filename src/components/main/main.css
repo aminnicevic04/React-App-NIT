@@ -1,0 +1,21 @@
+.main{
+    background-color: rgb(125, 233, 125);
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card1{
+    width: 300px;
+    height: auto;
+    background-color: #969696;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    padding: 10px;
+    text-align: center;
+}
+.card1 p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px ;
+}
