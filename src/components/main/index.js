@@ -11,7 +11,7 @@ const Main = () => {
           released by Facebook in 2013, and they still use it today for many of
           their applications. If you’re new to React, this article will help
           introduce you to the basics. Or, if you’d rather learn by doing, you
-          can jump right in with our Learn React course
+          can jump right in with our Learn React course.
         </p>
       </div>
     </div>
