@@ -1,6 +1,7 @@
 .footer{
     height: 160px;
-    background-color: rgb(227, 193, 149);
+    background-color: black;
     display: flex;
     justify-content: center;
+    color: white;
 }
