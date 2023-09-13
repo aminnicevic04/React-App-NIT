@@ -1,15 +1,12 @@
 import "./App.css";
-import Header from "./components/header";
-import Main from "./components/main";
-import Footer from "./components/footer";
+import "./components/Card";
+import Card from "./components/Card";
 
 //JSX
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+    <div className="mainDiv">
+      <Card></Card>
     </div>
   );
 }

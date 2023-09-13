@@ -1,0 +1,19 @@
+.kartica{
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    display:block;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    color: cadetblue;
+}
+p{
+    color: brown;
+    font-weight: 600;
+}
+.describe{
+    display: block;
+    justify-content: center;
+}
