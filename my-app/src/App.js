@@ -1,39 +1,169 @@
 import "./App.css";
-import "./components/Card";
-import Card from "./components/Card";
+import Card from "./components/Card/Card";
 
 //JSX
 function App() {
   const odeljenje = [
     {
-      ime: "amin nicevic",
-      godine: 2004,
-      obrazovanje: "DUNP",
-      zanimanje: "React",
+      ime: "Ahmed",
+      prezime: "Hasanovic",
+      redniBroj: 1,
+      vladanje: "odlicno",
+      uspeh: "4.5",
     },
     {
-      ime: "hasan mujanovic",
-      godine: 2005,
-      obrazovanje: "DUNP",
-      zanimanje: "Angular",
+      ime: "Jovan",
+      prezime: "Petrovic",
+      redniBroj: 2,
+      vladanje: "odlicno",
+      uspeh: "3.7",
+    },
+    {
+      ime: "Lejla",
+      prezime: "Dizdarevic",
+      redniBroj: 3,
+      vladanje: "odlicno",
+      uspeh: "5.0",
+    },
+    {
+      ime: "Ana",
+      prezime: "Markovic",
+      redniBroj: 4,
+      vladanje: "vrlodobro",
+      uspeh: "3.3",
+    },
+    {
+      ime: "Amir",
+      prezime: "Begovic",
+      redniBroj: 5,
+      vladanje: "odlicno",
+      uspeh: "5.0",
+    },
+    {
+      ime: "Maja",
+      prezime: "Ivanovic",
+      redniBroj: 6,
+      vladanje: "vrlodobro",
+      uspeh: "4.1",
+    },
+    {
+      ime: "Nikola",
+      prezime: "Stojanovic",
+      redniBroj: 7,
+      vladanje: "dobro",
+      uspeh: "3.9",
+    },
+    {
+      ime: "Stefan",
+      prezime: "Stojanovic",
+      redniBroj: 8,
+      vladanje: "dobro",
+      uspeh: "3.2",
+    },
+    {
+      ime: "Fatima",
+      prezime: "Mehic",
+      redniBroj: 9,
+      vladanje: "odlicno",
+      uspeh: "5.0",
+    },
+    {
+      ime: "Jovana",
+      prezime: "Djordjevic",
+      redniBroj: 10,
+      vladanje: "odlicno",
+      uspeh: "4.7",
+    },
+    {
+      ime: "Haris",
+      prezime: "Suljic",
+      redniBroj: 11,
+      vladanje: "vrlodobro",
+      uspeh: "4.3",
+    },
+    {
+      ime: "Samir",
+      prezime: "Avdic",
+      redniBroj: 12,
+      vladanje: "vrlodobro",
+      uspeh: "4.1",
+    },
+    {
+      ime: "Katarina",
+      prezime: "Pavlovic",
+      redniBroj: 13,
+      vladanje: "odlicno",
+      uspeh: "4.9",
+    },
+    {
+      ime: "Dzevad",
+      prezime: "Mujanovic",
+      redniBroj: 14,
+      vladanje: "dobar",
+      uspeh: "3.1",
+    },
+    {
+      ime: "Ivan Stevanovic",
+      prezime: "Simic",
+      redniBroj: 15,
+      vladanje: "odlicno",
+      uspeh: "4.5",
+    },
+    {
+      ime: "Selma",
+      prezime: "Omeragic",
+      redniBroj: 16,
+      vladanje: "odlicno",
+      uspeh: "4.9",
+    },
+    {
+      ime: "Katarina",
+      prezime: "Pavlovic",
+      redniBroj: 17,
+      vladanje: "vrlodobro",
+      uspeh: "4.4",
+    },
+    {
+      ime: "Marija",
+      prezime: "Popovic",
+      redniBroj: 18,
+      vladanje: "vrlodobro",
+      uspeh: "4.1",
+    },
+    {
+      ime: "Dzordze",
+      prezime: "Lukic",
+      redniBroj: 19,
+      vladanje: "vrlodobro",
+      uspeh: "3.9",
+    },
+    {
+      ime: "Lejla",
+      prezime: "Ibrahimovic",
+      redniBroj: 20,
+      vladanje: "vrlodobro",
+      uspeh: "4.1",
+    },
+    {
+      ime: "Adnan",
+      prezime: "Durakovic",
+      redniBroj: 21,
+      vladanje: "odlicno",
+      uspeh: "4.5",
     },
   ];
+
   return (
     <div className="mainDiv">
-      {/* <Card ime={"Amin Nicevic"} obrazovanje={"DUNP"} />
-      <Card ime={"Jedan drugi decko"} obrazovanje={"DUNP"} /> */}
-      {/* <Card /> */}
-      {/* <Card ime={}/> */}
       {odeljenje.map((el) => {
-        if (el.godine > 18) {
-          return (
-            <Card
-              ime={el.ime}
-              obrazovanje={el.obrazovanje}
-              godine={el.godine}
-            />
-          );
-        }
+        return (
+          <Card
+            ime={el.ime}
+            prezime={el.prezime}
+            vladanje={el.vladanje}
+            uspeh={el.uspeh}
+          />
+        );
       })}
     </div>
   );
