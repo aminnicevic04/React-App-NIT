@@ -11,6 +11,7 @@ function Card(props) {
         <h3>{props.prezime}</h3>
         <h3>{props.uspeh}</h3>
         <h3>{props.vladanje} vladanje</h3>
+        <h3 id="redniB">{props.redniBroj}</h3>
       </div>
     </div>
   );

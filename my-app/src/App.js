@@ -131,7 +131,7 @@ function App() {
       uspeh: "4.1",
     },
     {
-      ime: "Dzordze",
+      ime: "Djordje",
       prezime: "Lukic",
       redniBroj: 19,
       vladanje: "vrlodobro",
@@ -162,6 +162,7 @@ function App() {
             prezime={el.prezime}
             vladanje={el.vladanje}
             uspeh={el.uspeh}
+            redniBroj={el.redniBroj}
           />
         );
       })}

@@ -2,12 +2,15 @@
     border:1px solid black;
     text-align: center;
     padding-top: 20px;
-    width: 250px;
-    height: 300px;
+    width: 255px;
+    height: 330px;
     margin: 20px;
 }
 img{
     height: 100px;
     width: 100px;
     border-radius: 50%;
+}
+#redniB{
+    transform: translateX(110px)    ;
 }
