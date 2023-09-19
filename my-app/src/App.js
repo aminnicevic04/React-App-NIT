@@ -158,6 +158,11 @@ function App() {
   const [mojBroj, setMojBroj] = useState(3);
   console.log("promena");
 
+  const [prviString, setPrviString] = useState("");
+  const [drugiString, setDrugiString] = useState("");
+  const [treciString, setTreciString] = useState("");
+  const [cetvrtiString, setCetvrtiString] = useState("");
+
   return (
     // <div className="mainDiv">
     //   {odeljenje.map((el) => {
@@ -172,15 +177,27 @@ function App() {
     //     );
     //   })}
     // </div>
+    // <>
+    //   {" "}
+    //   <button onClick={() => setMojBroj((prev) => prev - 5)}>-5</button>
+    //   <button onClick={() => setMojBroj((prev) => prev - 1)}>-1</button>
+    //   <div className="container">
+    //     {mojBroj}
+    //     <button onClick={() => setMojBroj((prev) => prev + 1)}>+1</button>
+    //     <button onClick={() => setMojBroj((prev) => prev + 5)}>+5</button>
+    //   </div>
+    // </>
     <>
-      {" "}
-      <button onClick={() => setMojBroj((prev) => prev - 5)}>-5</button>
-      <button onClick={() => setMojBroj((prev) => prev - 1)}>-1</button>
-      <div className="container">
-        {mojBroj}
-        <button onClick={() => setMojBroj((prev) => prev + 1)}>+1</button>
-        <button onClick={() => setMojBroj((prev) => prev + 5)}>+5</button>
-      </div>
+      <button onClick={() => setPrviString((prev) => prev + "ovo ")}></button>
+      <button onClick={() => setDrugiString((prev) => prev + "je ")}></button>
+      <button onClick={() => setTreciString((prev) => prev + "IT ")}></button>
+      <button
+        onClick={() => setCetvrtiString((prev) => prev + "kamp")}
+      ></button>
+      <div className="first">{prviString}</div>
+      <div className="second">{drugiString}</div>
+      <div className="third">{treciString}</div>
+      <div className="fourth">{cetvrtiString}</div>
     </>
   );
 }
