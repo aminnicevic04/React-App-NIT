@@ -1,6 +1,6 @@
 import "./App.css";
 // import Card from "./components/Card/Card";
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 
 //JSX
 function App() {
@@ -154,14 +154,21 @@ function App() {
   // },
   // ];
 
-  let myNumber = 9;
-  const [mojBroj, setMojBroj] = useState(3);
-  console.log("promena");
+  // let myNumber = 9;
+  // const [mojBroj, setMojBroj] = useState(3);
+  // console.log("promena");
 
-  const [prviString, setPrviString] = useState("");
-  const [drugiString, setDrugiString] = useState("");
-  const [treciString, setTreciString] = useState("");
-  const [cetvrtiString, setCetvrtiString] = useState("");
+  // const [prviString, setPrviString] = useState("");
+  // const [drugiString, setDrugiString] = useState("");
+  // const [treciString, setTreciString] = useState("");
+  // const [cetvrtiString, setCetvrtiString] = useState("");
+
+  const [inputValue, setInputValue] = useState("");
+  const [djak, setDjak] = useState("Mehmed");
+
+  const [brojevi, setBroj] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10]);
+  const [noviBroj, setNoviBroj] = useState("");
+  console.log(brojevi);
 
   return (
     // <div className="mainDiv">
@@ -187,20 +194,62 @@ function App() {
     //     <button onClick={() => setMojBroj((prev) => prev + 5)}>+5</button>
     //   </div>
     // </>
-    <>
-      <button onClick={() => setPrviString((prev) => prev + "ovo ")}></button>
-      <button onClick={() => setDrugiString((prev) => prev + "je ")}></button>
-      <button onClick={() => setTreciString((prev) => prev + "IT ")}></button>
+
+    <div className="main">
+      {/* <div className="btns">
+        <button
+          onClick={() => setPrviString((prev) => prev + "ovo ")}
+          first
+          click
+        >
+          first click
+        </button>
+        <button onClick={() => setDrugiString((prev) => prev + "je ")}>
+          second click
+        </button>
+        <button onClick={() => setTreciString((prev) => prev + "IT ")}>
+          third click
+        </button>
+        <button onClick={() => setCetvrtiString((prev) => prev + "kamp")}>
+          {" "}
+          fourth click
+        </button>
+      </div>
+      <div className="outputs">
+        <div className="first">{prviString}</div>
+        <div className="second">{drugiString}</div>
+        <div className="third">{treciString}</div>
+        <div className="fourth">{cetvrtiString}</div>
+      </div> */}
+      {/* <input
+        type="text"
+        value={djak}
+        onChange={(e) => setDjak(e.target.value)}
+      ></input>\q
+      <button onClick={() => alert(`cao ${djak}`)}>Hello</button> */}
+      {/* <input
+        placeholder="dodaj broj"
+        value={noviBroj}
+        onChange={(e) => setNoviBroj(e.target.value)}
+      ></input> */}
+      <input
+        placeholder="dodaj broj"
+        value={noviBroj}
+        onChange={(e) => setNoviBroj(e.target.value)}
+      ></input>
       <button
-        onClick={() => setCetvrtiString((prev) => prev + "kamp")}
-      ></button>
-      <div className="first">{prviString}</div>
-      <div className="second">{drugiString}</div>
-      <div className="third">{treciString}</div>
-      <div className="fourth">{cetvrtiString}</div>
-    </>
+        onClick={() => {
+          setBroj((prev) => [...prev, noviBroj]);
+          setNoviBroj();
+        }}
+      >
+        Dodaj broj
+      </button>
+    </div>
   );
 }
 //use state sluzi da bi cuvali neko stanje koje cemo da menjamo
+// forma ime prezime god i button submit na submit da console loga taj objekat radi se preko state defualt value prazan string za sve
+// 2 konzologas ceo obj i vidi dal ispisuje na svki klik ako ispisuje izbegni trebace drugi statovi
 
 export default App;

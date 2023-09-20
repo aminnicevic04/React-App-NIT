@@ -6,3 +6,29 @@
 .container{
     display: flex;
 } */
+button{
+    width: 100px;
+    height: 40px;
+    background-color: green;
+    margin-left: 10px;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    background-color: white;
+}
+.main{
+    display: flex;
+    justify-content: center;   
+    margin-top: 100px; 
+}
+.outputs{
+    width: auto;
+    height: 50px;
+    display: block;
+    margin-left: 50px;
+}
