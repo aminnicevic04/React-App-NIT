@@ -11,24 +11,21 @@ button{
     height: 40px;
     background-color: green;
     margin-left: 10px;
-}
-.btns{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
-    background-color: white;
-}
+}   
 .main{
     display: flex;
     justify-content: center;   
     margin-top: 100px; 
 }
-.outputs{
-    width: auto;
-    height: 50px;
-    display: block;
-    margin-left: 50px;
+.forma{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    background-color: rgb(165, 161, 161);
+    padding-top: 30px;
+}
+input{
+    margin-bottom: 30px;
+    width: 250px;
+    height: 40px;
 }
