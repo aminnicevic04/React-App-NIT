@@ -1,5 +1,6 @@
 import "./App.css";
 // import Card from "./components/Card/Card";
+import Forma1 from "./components/Forma-domaci/forma1";
 import React, { useState, useTransition } from "react";
 
 //JSX
@@ -20,33 +21,37 @@ function App() {
   };
 
   return (
-    <div className="main">
-      <div className="forma">
-        <input
-          placeholder="Ime"
-          value={ime}
-          onChange={(e) => setIme(e.target.value)}
-        ></input>
-        <input
-          placeholder="Prezime"
-          value={prezime}
-          onChange={(e) => setPrezime(e.target.value)}
-        ></input>
-        <input
-          placeholder="Godiste"
-          value={godiste}
-          onChange={(e) => setGodiste(e.target.value)}
-        ></input>
-        <input
-          placeholder="Zanimanje"
-          value={zanimanje}
-          onChange={(e) => setZanimanje(e.target.value)}
-        ></input>
-        <div className="btn">
-          <button onClick={handleSubmit}>submit</button>
-        </div>
-      </div>
-    </div>
+    <>
+      <Forma1 />
+    </>
+
+    // <div className="main">
+    //   <div className="forma">
+    //     <input
+    //       placeholder="Ime"
+    //       value={ime}
+    //       onChange={(e) => setIme(e.target.value)}
+    //     ></input>
+    //     <input
+    //       placeholder="Prezime"
+    //       value={prezime}
+    //       onChange={(e) => setPrezime(e.target.value)}
+    //     ></input>
+    //     <input
+    //       placeholder="Godiste"
+    //       value={godiste}
+    //       onChange={(e) => setGodiste(e.target.value)}
+    //     ></input>
+    //     <input
+    //       placeholder="Zanimanje"
+    //       value={zanimanje}
+    //       onChange={(e) => setZanimanje(e.target.value)}
+    //     ></input>
+    //     <div className="btn">
+    //       <button onClick={handleSubmit}>submit</button>
+    //     </div>
+    //   </div>
+    // </div>
   );
 }
 //use state sluzi da bi cuvali neko stanje koje cemo da menjamo
