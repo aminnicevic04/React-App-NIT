@@ -16,6 +16,9 @@
     text-align: center;
     font-size: 35px;
 }
-/* .cards{
-    
-} */
+.output-kartica .keys{
+    color: rgba(143, 124, 236, 0.7);
+}
+.output-kartica .props-stil{
+    color: white;
+}

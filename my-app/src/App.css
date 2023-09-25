@@ -6,12 +6,7 @@
 .container{
     display: flex;
 } */
-button{
-    width: 100px;
-    height: 40px;
-    background-color: green;
-    margin-left: 10px;
-}   
+ 
 .main{
     display: flex;
     justify-content: center;   

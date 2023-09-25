@@ -1,28 +1,78 @@
-import Output from "./Output";
+import Output from "./Output.js";
 import "./forma1.css";
 import React, { useState } from "react";
-
-function Forma1() {
+function Forma1({ addCard, cards }) {
   const [selectedOption, setSelectedOption] = useState("da");
+  const [imePrezime, setImePrezime] = useState("");
+  const [Prezime, setPrezime] = useState("");
+  const [godine, setGodine] = useState("");
+  const [grad, setGrad] = useState("");
+  const [hobi, setHobi] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const info = { imePrezime, Prezime, godine, grad, hobi };
+
+    addCard(info);
+
+    setImePrezime("");
+    setGodine("");
+    setGrad("");
+    setHobi("");
+  };
 
   return (
     <div className="login">
       <h2>Unesite podatke</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="user">
-          <input type="text" id="txt" />
-          <label for="txt">Ime i prezime</label>
+          <input
+            type="text"
+            id="txt"
+            required
+            value={imePrezime}
+            onChange={(e) => setImePrezime(e.target.value)}
+          />
+          <label for="txt">Ime</label>
+        </div>
+        <div className="user">
+          <input
+            type="text"
+            id="txt"
+            required
+            value={Prezime}
+            onChange={(e) => setPrezime(e.target.value)}
+          />
+          <label for="txt">Prezime</label>
         </div>
         <div className="password">
-          <input type="number" id="pass" />
+          <input
+            type="number"
+            id="pass"
+            required
+            value={godine}
+            onChange={(e) => setGodine(e.target.value)}
+          />
           <label for="pass">Godine</label>
         </div>
         <div className="user">
-          <input type="text" id="pass" />
+          <input
+            type="text"
+            id="pass"
+            required
+            value={grad}
+            onChange={(e) => setGrad(e.target.value)}
+          />
           <label for="pass">Grad</label>
         </div>
         <div className="user">
-          <input type="text" id="pass" />
+          <input
+            type="text"
+            id="pass"
+            required
+            value={hobi}
+            onChange={(e) => setHobi(e.target.value)}
+          />
           <label for="pass">Hobi</label>
         </div>
         <div className="checkbox">
@@ -49,12 +99,13 @@ function Forma1() {
           </div>
         </div>
         <div className="button">
-          <a className="submit" href="#">
+          <button className="submit" href="#">
             Submit
-          </a>
+          </button>
         </div>
+        {/* <p>{imePrezime}</p> */}
       </form>
-      <Output />
+      <Output cards={cards} />
     </div>
   );
 }

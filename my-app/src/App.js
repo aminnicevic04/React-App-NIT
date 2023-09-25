@@ -1,7 +1,7 @@
 import "./App.css";
 // import Card from "./components/Card/Card";
 import Forma1 from "./components/Forma-domaci/forma1";
-import React, { useState, useTransition } from "react";
+import React, { useState } from "react";
 
 //JSX
 function App() {
@@ -9,6 +9,8 @@ function App() {
   const [prezime, setPrezime] = useState("");
   const [godiste, setGodiste] = useState("");
   const [zanimanje, setZanimanje] = useState("");
+
+  const [cards, setCards] = useState([]);
 
   const handleSubmit = () => {
     const objekat = {
@@ -20,9 +22,15 @@ function App() {
     console.log(objekat);
   };
 
+  const addCard = (data) => {
+    setCards((prevState) => {
+      return [...prevState, data];
+    });
+  };
+
   return (
     <>
-      <Forma1 />
+      <Forma1 addCard={addCard} cards={cards} />
     </>
 
     // <div className="main">

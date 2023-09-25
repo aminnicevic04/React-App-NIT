@@ -48,7 +48,8 @@ body{
     transition: .5s;
 }
 .submit{
-    padding: 10px 20px;
+    padding: 15px 25px;
+    background-color: transparent;
     color: #CBB;
     text-decoration: none;
     transition: .5s;
