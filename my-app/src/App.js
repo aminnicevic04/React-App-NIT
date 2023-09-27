@@ -30,12 +30,12 @@ function App() {
   };
 
   return (
-    <div className="main">
-      <Cas6 />
-    </div>
-    // <>
-    //   <Forma1 addCard={addCard} cards={cards} />
-    // </>
+    // <div className="main">
+    //   <Cas6 />
+    // </div>
+    <>
+      <Forma1 addCard={addCard} cards={cards} />
+    </>
 
     // <div className="main">
     //   <div className="forma">
