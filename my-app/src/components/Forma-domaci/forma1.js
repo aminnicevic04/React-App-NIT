@@ -11,7 +11,7 @@ function Forma1({ addCard, cards }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const info = { imePrezime, Prezime, godine, grad, hobi };
+    const info = { imePrezime, Prezime, godine, grad, hobi, selectedOption };
 
     addCard(info);
 

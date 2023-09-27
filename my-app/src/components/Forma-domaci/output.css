@@ -9,6 +9,10 @@
     background-color: #242826;
     box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
     border-radius: 10px;
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   max-height: 100%; 
 }
 .naslov > h2{
     margin-bottom: 30px;

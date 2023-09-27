@@ -31,6 +31,10 @@ function Output({ cards }) {
                   <span className="keys">Hobi: </span>
                   <span class="props-stil">{data.hobi}</span>
                 </h3>
+                <h3>
+                  <span className="keys">Zauzet: </span>
+                  <span class="props-stil">{data.selectedOption}</span>
+                </h3>
               </div>
             </Card>
           ))}

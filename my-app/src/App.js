@@ -1,4 +1,5 @@
 import "./App.css";
+import Cas6 from "./components/Casovi/cas6/cas6";
 // import Card from "./components/Card/Card";
 import Forma1 from "./components/Forma-domaci/forma1";
 import React, { useState } from "react";
@@ -29,9 +30,12 @@ function App() {
   };
 
   return (
-    <>
-      <Forma1 addCard={addCard} cards={cards} />
-    </>
+    <div className="main">
+      <Cas6 />
+    </div>
+    // <>
+    //   <Forma1 addCard={addCard} cards={cards} />
+    // </>
 
     // <div className="main">
     //   <div className="forma">
