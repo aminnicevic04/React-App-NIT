@@ -50,4 +50,4 @@ export default Main;
 // 20 --- 48 vrelo
 // treba da ubacim massage koji se displeya
 // ne radi mi slika
-// prvo probaj da ubacis sliku ovde kao fajla a ne preko url
+// prvo probaj da ubacis sliku ovde kao fajla a ne preko url-a
