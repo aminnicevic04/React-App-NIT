@@ -48,3 +48,6 @@ export default Main;
 // -36 --- -5 hladno je
 // -5 --- 20 prijatno
 // 20 --- 48 vrelo
+// treba da ubacim massage koji se displeya
+// ne radi mi slika
+// prvo probaj da ubacis sliku ovde kao fajla a ne preko url
