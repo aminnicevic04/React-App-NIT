@@ -6,6 +6,9 @@
 .container{
     display: flex;
 } */
+.body{
+    background-color: #fff;
+}
  
 .main{
     display: flex;
