@@ -1,5 +1,5 @@
 import Card from "./Card";
-import "./output.css";
+// import "./output.css";
 import { useState } from "react";
 
 function Output({ cards }) {

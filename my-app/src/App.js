@@ -4,6 +4,7 @@ import Cas6 from "./components/Casovi/cas6/cas6";
 import Forma1 from "./components/Forma-domaci/forma1";
 import React, { useState } from "react";
 import Cas7 from "./components/Casovi/cas7/cas7";
+import Main from "./components/Cond.Rend-domaci/main";
 
 //JSX
 function App() {
@@ -32,8 +33,11 @@ function App() {
 
   return (
     <>
-      <Cas7></Cas7>
+      <Main></Main>
     </>
+    // <>
+    //   <Cas7></Cas7>
+    // </>
     // <div className="main">
     //   <Cas6 />
     // </div>

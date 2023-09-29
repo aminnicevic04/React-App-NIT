@@ -1,12 +1,12 @@
 import React from "react";
 
-function Products(ime, cena) {
+function Product({ ime, cena }) {
   return (
     <div>
       <h1>{ime}</h1>
-      <h1>{cena}</h1>
+      <h2>{cena}</h2>
     </div>
   );
 }
 
-export default Products;
+export default Product;

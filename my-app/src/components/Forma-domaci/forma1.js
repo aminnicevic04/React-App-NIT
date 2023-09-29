@@ -1,5 +1,5 @@
 import Output from "./Output.js";
-import "./forma1.css";
+// import "./forma1.css";
 import React, { useState } from "react";
 function Forma1({ addCard, cards }) {
   const [selectedOption, setSelectedOption] = useState("da");

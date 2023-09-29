@@ -1,4 +1,4 @@
-import "./card.css";
+// import "./card.css";
 
 function Card({ children }) {
   return <div className="card">{children}</div>;
