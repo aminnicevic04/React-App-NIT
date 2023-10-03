@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Artikl from "./Artikl.js";
+import "./Fatch.css";
+
 function Fatch() {
   const [defaultData, setDefaultData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
+  // const [filteredData, setFilteredData] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const getData = () =>
@@ -12,24 +14,10 @@ function Fatch() {
 
   console.log(defaultData);
   return (
-    <div style={{ minHeight: "100vh" }}>
+    <div className="glavni">
       <button onClick={getData}>Uzmi podatke</button>
-      <button
-        onClick={() =>
-          setFilteredData(defaultData.filter((el) => el.id % 2 === 0))
-        }
-      >
-        Filtriraj podatke
-      </button>
 
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          height: "200px",
-          width: "100px",
-        }}
-      >
+      <div>
         {loading && <h1>Loading.....</h1>}
         {defaultData?.length > 0 ? (
           defaultData?.map((product) => (
