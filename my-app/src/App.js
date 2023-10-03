@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import Cas7 from "./components/Casovi/cas7/cas7";
 import Cas8 from "./components/Casovi/cas8/Cas8";
 import Main from "./components/Cond.Rend-domaci/main";
+import Fatch from "./components/Fatch-domaci/Fatch";
 
 //JSX
 function App() {
@@ -34,8 +35,11 @@ function App() {
 
   return (
     <>
-      <Cas8></Cas8>
+      <Fatch></Fatch>
     </>
+    // <>
+    //   <Cas8></Cas8>
+    // </>
     // <>
     //   <Main></Main>
     // </>

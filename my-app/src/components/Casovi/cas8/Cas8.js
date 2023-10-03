@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 function Cas8() {
   const [defaultData, setDefaultData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -19,7 +20,7 @@ function Cas8() {
       >
         Filtriraj podatke
       </button>
-      x
+
       <div
         style={{
           display: "flex",
