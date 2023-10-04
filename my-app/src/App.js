@@ -7,6 +7,7 @@ import Cas7 from "./components/Casovi/cas7/cas7";
 import Cas8 from "./components/Casovi/cas8/Cas8";
 import Main from "./components/Cond.Rend-domaci/main";
 import Fatch from "./components/Fatch-domaci/Fatch";
+import Cas9 from "./components/Casovi/cas9/cas9";
 
 //JSX
 function App() {
@@ -35,8 +36,11 @@ function App() {
 
   return (
     <>
-      <Fatch></Fatch>
+      <Cas9></Cas9>
     </>
+    // <>
+    //   <Fatch></Fatch>
+    // </>
     // <>
     //   <Cas8></Cas8>
     // </>

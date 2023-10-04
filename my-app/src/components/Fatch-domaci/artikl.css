@@ -1,8 +1,8 @@
 .artikli{
-    width: 500px;
+    width: 400px;
     height: auto;
     /* border: 1px solid black; */
-    background-color: rgb(137, 46, 170);
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,10 +11,12 @@
     margin-bottom: 20px;
 }
 .artikli img{
-    width: 300px;
+    mix-blend-mode:multiply;
+    margin-top: 20px;
+    width: 250px;
     height: 200px;
-    border-radius: 100px;
+    /* border-radius: 100px; */
 }
 .artikli label{
-    
+   color: rgb(45, 120, 185); 
 }

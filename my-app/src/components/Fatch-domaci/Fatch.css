@@ -11,10 +11,12 @@ body{
     padding-right: 100px;
 }
 .glavni button{
-    margin-right: 500px;
+    margin-right: 100px;
     margin-top:20px;
     font-weight: 500;
     font-size: larger;
-    width: 300px;
+    width: 200px;
     height: 60px;
+    background-color: rgb(45, 120, 185);
+    color: white;
 }
