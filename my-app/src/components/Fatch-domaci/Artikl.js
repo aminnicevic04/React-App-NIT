@@ -1,24 +1,24 @@
 import React from "react";
 import "./artikl.css";
-const Artikl = ({ images, brand, title, category, description, price }) => {
+const Artikl = ({ product }) => {
   return (
     <div className="artikli">
-      <img src={images[0]}></img>
+      <img src={product.images[0]}></img>
       <h1>
         <label>Brand: </label>
-        {brand}
+        {product.brand}
       </h1>
       <h1>
         <label>Category: </label>
-        {category}
+        {product.category}
       </h1>
       <h1>
         <label>Description: </label>
-        {description}
+        {product.description}
       </h1>
       <h1>
         <label>Price: </label>
-        {price}$
+        {product.price}$
       </h1>
     </div>
   );

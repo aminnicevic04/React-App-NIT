@@ -22,12 +22,13 @@ function Fatch() {
         {defaultData?.length > 0 ? (
           defaultData?.map((product) => (
             <Artikl
-              images={product.images}
-              brand={product.brand}
-              title={product.title}
-              category={product.category}
-              description={product.description}
-              price={product.price}
+              // images={product.images}
+              // brand={product.brand}
+              // title={product.title}
+              // category={product.category}
+              // description={product.description}
+              // price={product.price}
+              product={product}
             ></Artikl>
           ))
         ) : (
