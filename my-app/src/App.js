@@ -9,6 +9,7 @@ import Main from "./components/Cond.Rend-domaci/main";
 import Fatch from "./components/Fatch-domaci/Fatch";
 import Cas9 from "./components/Casovi/cas9/cas9";
 import Cas10 from "./components/Casovi/cas10/Cas10";
+import Search from "./components/Search.Bar-doamci/Search";
 
 //JSX
 function App() {
@@ -36,13 +37,18 @@ function App() {
   };
 
   return (
-    // <Cas10></Cas10>
+    <>
+      <Search />
+    </>
+    // <>
+    //   <Cas10></Cas10>
+    // </>
     // <>
     //   <Cas9></Cas9>
     // </>
-    <>
-      <Fatch></Fatch>
-    </>
+    // <>
+    //   <Fatch></Fatch>
+    // </>
     // <>
     //   <Cas8></Cas8>
     // </>
