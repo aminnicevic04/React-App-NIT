@@ -5,3 +5,9 @@ function Cas10() {
 }
 
 export default Cas10;
+
+// Lifecycling components in react
+// Tri faze zivotnog ciklusa komponente
+//1 mounting phase
+//2 updating phase
+//3 unmounting phase
