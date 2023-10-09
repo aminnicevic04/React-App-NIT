@@ -10,6 +10,7 @@ import Fatch from "./components/Fatch-domaci/Fatch";
 import Cas9 from "./components/Casovi/cas9/cas9";
 import Cas10 from "./components/Casovi/cas10/Cas10";
 import Search from "./components/Search.Bar-doamci/Search";
+import Cas11 from "./components/Casovi/cas11/cas11";
 
 //JSX
 function App() {
@@ -38,8 +39,11 @@ function App() {
 
   return (
     <>
-      <Search />
+      <Cas11 />
     </>
+    // <>
+    //   <Search />
+    // </>
     // <>
     //   <Cas10></Cas10>
     // </>
