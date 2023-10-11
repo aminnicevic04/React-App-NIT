@@ -11,14 +11,14 @@ function Cas11() {
     fetch(`https://dummyjson.com/products/search?q=${search}`)
       .then((res) => res.json())
       .then((products) => setData(products.products))
-      .catch((error) => console.error("Error fetching data:", error));
+      .catch((error) => alert("Error fetching data:", error));
   };
 
   const getDataByCategory = () => {
     fetch(`https://dummyjson.com/products/category/${category}`)
       .then((res) => res.json())
       .then((products) => setData(products.products))
-      .catch((error) => console.error("Error fetching data:", error));
+      .catch((error) => alert("Error fetching data:", error));
   };
 
   useEffect(() => {
@@ -48,14 +48,7 @@ function Cas11() {
           <option value="laptops">Laptops</option>
           <option value="home-decoration">Home decoration</option>
           <option value="skincare">Skincare</option>{" "}
-          {/* Dodajte više opcija prema potrebi */}
         </select>
-        {/* <button
-          onClick={category ? getDataByCategory : getData}
-          className="searchButton"
-        >
-          Pretraži
-        </button> */}
       </div>
 
       <div className="cardWrapper">
