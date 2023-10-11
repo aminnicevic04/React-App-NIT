@@ -5,27 +5,29 @@ import "./style.css";
 function Cas11() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
-  const [category, setcategory] = useState("");
+  const [category, setCategory] = useState("");
 
   const getData = () => {
     fetch(`https://dummyjson.com/products/search?q=${search}`)
       .then((res) => res.json())
-      .then((products) => setData(products.products));
+      .then((products) => setData(products.products))
+      .catch((error) => console.error("Error fetching data:", error));
   };
-  const getDataByCategories = () => {
-    fetch(`https://dummyjson.com/products/category/${category}`).then((res) =>
-      res.json()
-    );
-    // .then((products) => setData(products.products));
+
+  const getDataByCategory = () => {
+    fetch(`https://dummyjson.com/products/category/${category}`)
+      .then((res) => res.json())
+      .then((products) => setData(products.products))
+      .catch((error) => console.error("Error fetching data:", error));
   };
 
   useEffect(() => {
-    getData();
-    // getDataByCategories();
-  }, []);
-
-  console.log(data, "DATTA");
-  console.log(search, "SEARCH");
+    if (category) {
+      getDataByCategory();
+    } else {
+      getData();
+    }
+  }, [search, category]);
 
   return (
     <div className="container">
@@ -36,25 +38,28 @@ function Cas11() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <img
-          onClick={getData}
-          src="search-svgrepo-com.svg"
-          height={30}
-          width={30}
-        />
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="categorySelect"
+        >
+          <option value="">Sve kategorije</option>
+          <option value="smartphones">Smartphones</option>
+          <option value="laptops">Laptops</option>
+          <option value="home-decoration">Home decoration</option>
+          <option value="skincare">Skincare</option>{" "}
+          {/* Dodajte više opcija prema potrebi */}
+        </select>
+        {/* <button
+          onClick={category ? getDataByCategory : getData}
+          className="searchButton"
+        >
+          Pretraži
+        </button> */}
       </div>
 
       <div className="cardWrapper">
-        {/* <KarticaDomaci />
-        <KarticaDomaci /> */}
         {data.map((product) => (
-          //   <KarticaDomaci
-          //     title={product.title}
-          //     brand={product.brand}
-          //     category={product.category}
-          //     description={product.description}
-          //     key={product.id}
-          //   />
           <KarticaDomaci product={product} key={product.id} />
         ))}
       </div>
