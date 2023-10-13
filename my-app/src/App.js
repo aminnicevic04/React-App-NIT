@@ -12,6 +12,7 @@ import Cas10 from "./components/Casovi/cas10/Cas10";
 import Search from "./components/Search.Bar-doamci/Search";
 import Cas11 from "./components/Casovi/cas11/cas11";
 import Cas12 from "./components/Casovi/cas12/cas12";
+import Cas13 from "./components/Casovi/Cas13/Cas13";
 
 //JSX
 function App() {
@@ -40,8 +41,11 @@ function App() {
 
   return (
     <>
-      <Cas12></Cas12>
+      <Cas13></Cas13>
     </>
+    // <>
+    //   <Cas12></Cas12>
+    // </>
     // <>
     //   <Cas11 />
     // </>
