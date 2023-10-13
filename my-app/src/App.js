@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import Cas7 from "./components/Casovi/cas7/cas7";
 import Cas8 from "./components/Casovi/cas8/Cas8";
 import Main from "./components/Cond.Rend-domaci/main";
-import Fatch from "./components/Fatch-domaci/Fatch";
+import Fatch from "./components/Fetch-domaci/Fatch";
 import Cas9 from "./components/Casovi/cas9/cas9";
 import Cas10 from "./components/Casovi/cas10/Cas10";
 import Search from "./components/Search.Bar-doamci/Search";
