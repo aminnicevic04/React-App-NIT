@@ -12,7 +12,8 @@ import Cas10 from "./components/Casovi/cas10/Cas10";
 import Search from "./components/Search.Bar-doamci/Search";
 import Cas11 from "./components/Casovi/cas11/cas11";
 import Cas12 from "./components/Casovi/cas12/cas12";
-import Cas13 from "./components/Casovi/Cas13/Cas13";
+import Cas13 from "./components/Casovi/cas13/Cas13";
+import Blog from "./components/Blog-domaci/Blog";
 
 //JSX
 function App() {
@@ -41,8 +42,11 @@ function App() {
 
   return (
     <>
-      <Cas13></Cas13>
+      <Blog></Blog>
     </>
+    // <>
+    //   <Cas13></Cas13>
+    // </>
     // <>
     //   <Cas12></Cas12>
     // </>
