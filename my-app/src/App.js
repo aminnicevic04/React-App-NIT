@@ -41,9 +41,9 @@ function App() {
   };
 
   return (
-    <>
-      <Blog></Blog>
-    </>
+    // <>
+    //   <Blog></Blog>
+    // </>
     // <>
     //   <Cas13></Cas13>
     // </>
@@ -77,9 +77,9 @@ function App() {
     // <div className="main">
     //   <Cas6 />
     // </div>
-    // <>
-    //   <Forma1 addCard={addCard} cards={cards} />
-    // </>
+    <>
+      <Forma1 addCard={addCard} cards={cards} />
+    </>
 
     // <div className="main">
     //   <div className="forma">

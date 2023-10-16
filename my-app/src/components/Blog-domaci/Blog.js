@@ -19,6 +19,7 @@ function Blog() {
       .then((res) => res.json())
       .then((data) => {
         setDefaultData(data?.posts);
+        console.log(defaultData);
       })
       .catch((error) => {
         console.error("Greška prilikom dobijanja podataka:", error);

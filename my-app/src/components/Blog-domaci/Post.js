@@ -42,7 +42,8 @@ function Post({ posts }) {
         />
         {hasLiked ? (
           <h4>
-            You and {likes} {likes === 1 ? "person" : "people"} like this post.
+            You and {likes - 1} {likes === 1 ? "person" : "people"} like this
+            post.
           </h4>
         ) : (
           <h4>
