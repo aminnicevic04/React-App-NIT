@@ -50,13 +50,23 @@ function Blog() {
       )}
 
       <div className="pagination">
-        <img onClick={prev} alt="left" src={Left}></img>
+        <img
+          onClick={prev}
+          alt="left"
+          src={Left}
+          style={{ cursor: "pointer" }}
+        ></img>
         {/* {pageNumbers.map((button) => (
           <button key={button} onClick={() => setCurrentPage(button)}>
             {button}
           </button>
         ))} */}
-        <img src={Right} onClick={next} alt="right"></img>
+        <img
+          src={Right}
+          onClick={next}
+          alt="right"
+          style={{ cursor: "pointer" }}
+        ></img>
       </div>
     </div>
   );
