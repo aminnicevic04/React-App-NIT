@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./post.css";
-import "./blog.css";
 import Post from "./Post";
-import Right from "./right.png";
-import Left from "./left.png";
 
-function Blog() {
+export function Blog() {
   const [defaultData, setDefaultData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const blogsPerPage = 9;
+  const blogsPerPage = 100;
+  const [buttonsArray, setButtonsArray] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -25,11 +22,17 @@ function Blog() {
       });
   }, [currentPage]);
 
-  // const pageNumbers = [];
-
-  // for (let i = 1; i <= Math.ceil(defaultData.length / blogsPerPage); i++) {
-  //   pageNumbers.push(i);
-  // }
+  const pageNumbers = [];
+  useEffect(() => {
+    for (let i = 1; i <= Math.ceil(defaultData.length / blogsPerPage); i++) {
+      pageNumbers.push(i);
+    }
+    // const newButtonsArray = Array.from(
+    //   { length: totalPage },
+    //   (_, index) => index + 1
+    // );
+    setButtonsArray(newButtonsArray);
+  }, [defaultData, blogsPerPage]);
 
   function next() {
     setCurrentPage(currentPage + 1);
@@ -49,17 +52,15 @@ function Blog() {
         <h1>Nema trenutno podataka </h1>
       )}
 
-      <div className="pagination">
-        <img onClick={prev} alt="left" src={Left}></img>
-        {/* {pageNumbers.map((button) => (
+      <div>
+        <button onClick={prev}>Prev</button>
+        {pageNumbers.map((button) => (
           <button key={button} onClick={() => setCurrentPage(button)}>
             {button}
           </button>
-        ))} */}
-        <img src={Right} onClick={next} alt="right"></img>
+        ))}
+        <button onClick={next}>Next</button>
       </div>
     </div>
   );
 }
-
-export default Blog;

@@ -3,25 +3,21 @@ import "./post.css";
 import Slika from "./slika.png";
 
 function Post({ posts }) {
-  const [likes, setLikes] = useState(posts.reactions);
-  const [hasLiked, setHasLiked] = useState(false);
-
-  useEffect(() => {
-    // Proveri lokalno skladište da li je korisnik već lajkovao ovaj post
-    const hasLikedPost = localStorage.getItem(`liked_${posts.id}`);
-    if (hasLikedPost) {
-      setHasLiked(true);
-    }
-  }, [posts.id]);
+  const likedPosts = JSON.parse(localStorage.getItem("likedPosts")) || {};
+  const [likes, setLikes] = useState(
+    posts.reactions + Object.keys(likedPosts).length
+  );
+  const [hasLiked, setHasLiked] = useState(likedPosts[posts.id]);
 
   const handleLikeClick = () => {
     if (!hasLiked) {
-      // Ako korisnik već nije lajkovao post
       setLikes(likes + 1);
       setHasLiked(true);
-
-      // Sačuvaj informaciju u lokalnom skladištu da je korisnik lajkovao ovaj post
-      localStorage.setItem(`liked_${posts.id}`, "true");
+      const updatedLikedPosts = {
+        ...likedPosts,
+        [posts.id]: true,
+      };
+      localStorage.setItem("likedPosts", JSON.stringify(updatedLikedPosts));
     }
   };
 
@@ -44,7 +40,15 @@ function Post({ posts }) {
           onClick={handleLikeClick}
           style={{ cursor: "pointer" }}
         />
-        <h4>{likes} users like this post.</h4>
+        {hasLiked ? (
+          <h4>
+            You and {likes} {likes === 1 ? "person" : "people"} like this post.
+          </h4>
+        ) : (
+          <h4>
+            {likes} {likes === 1 ? "user likes" : "users like"} this post.
+          </h4>
+        )}
       </div>
     </div>
   );
