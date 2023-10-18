@@ -13,3 +13,6 @@ function HomePage() {
 }
 
 export default HomePage;
+
+// navbar home product posts
+// navbar izvan ruta, iznad browse route
