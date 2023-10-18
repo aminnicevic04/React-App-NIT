@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 import "./App.css";
 import Cas6 from "./components/Casovi/cas6/cas6";
 // import Card from "./components/Card/Card";
 import Forma1 from "./components/Forma-domaci/forma1";
-import React, { useState } from "react";
 import Cas7 from "./components/Casovi/cas7/cas7";
 import Cas8 from "./components/Casovi/cas8/Cas8";
 import Main from "./components/Cond.Rend-domaci/main";
@@ -14,33 +14,45 @@ import Cas11 from "./components/Casovi/cas11/cas11";
 import Cas12 from "./components/Casovi/cas12/cas12";
 import Cas13 from "./components/Casovi/cas13/Cas13";
 import Blog from "./components/Blog-domaci/Blog";
+import Cas15 from "./components/Casovi/cas15/Cas15";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "../src/pages/HomePage";
+import AboutPage from "../src/pages/AboutPage";
 
 //JSX
 function App() {
-  const [ime, setIme] = useState("");
-  const [prezime, setPrezime] = useState("");
-  const [godiste, setGodiste] = useState("");
-  const [zanimanje, setZanimanje] = useState("");
+  // const [ime, setIme] = useState("");
+  // const [prezime, setPrezime] = useState("");
+  // const [godiste, setGodiste] = useState("");
+  // const [zanimanje, setZanimanje] = useState("");
 
-  const [cards, setCards] = useState([]);
+  // const [cards, setCards] = useState([]);
 
-  const handleSubmit = () => {
-    const objekat = {
-      Ime: ime,
-      Prezime: prezime,
-      Godiste: godiste,
-      Zanimanje: zanimanje,
-    };
-    console.log(objekat);
-  };
+  // const handleSubmit = () => {
+  //   const objekat = {
+  //     Ime: ime,
+  //     Prezime: prezime,
+  //     Godiste: godiste,
+  //     Zanimanje: zanimanje,
+  //   };
+  //   console.log(objekat);
+  // };
 
-  const addCard = (data) => {
-    setCards((prevState) => {
-      return [...prevState, data];
-    });
-  };
+  // const addCard = (data) => {
+  //   setCards((prevState) => {
+  //     return [...prevState, data];
+  //   });
+  // };
 
   return (
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
     // <>
     //   <Blog></Blog>
     // </>
@@ -77,9 +89,9 @@ function App() {
     // <div className="main">
     //   <Cas6 />
     // </div>
-    <>
-      <Forma1 addCard={addCard} cards={cards} />
-    </>
+    // <>
+    //   <Forma1 addCard={addCard} cards={cards} />
+    // </>
 
     // <div className="main">
     //   <div className="forma">
