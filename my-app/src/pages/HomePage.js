@@ -7,7 +7,7 @@ function HomePage() {
     <div>
       <h1>home page</h1>
       {/* <Link to={"./about"}>idi na AboutPage </Link> */}
-      <button onClick={() => navigate("/about")}>about</button>
+      <button onClick={() => navigate("/about")}>About</button>
     </div>
   );
 }
