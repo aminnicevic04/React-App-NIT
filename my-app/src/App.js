@@ -124,6 +124,6 @@ function App() {
 }
 //use state sluzi da bi cuvali neko stanje koje cemo da menjamo
 // forma ime prezime god i button submit na submit da console loga taj objekat radi se preko state defualt value prazan string za sve
-// 2 konzologas ceo obj i vidi dal ispisuje na svki klik ako ispisuje izbegni trebace drugi statovi
+// 2 konzologas ceo obj i vidi dal ispisuje na svki klik ako ispisuje izbegni trebace drugi statovi 
 
 export default App;
